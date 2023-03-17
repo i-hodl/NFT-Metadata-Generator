@@ -6,7 +6,12 @@
   padding: none;
   position: center;
 }
-
+.title-bar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: -1; /* this will move the element to the beginning of flex container */
+}
 .title-bar {
   display: flex;
   align-items: center;
@@ -87,6 +92,7 @@
 }
 
 .button-line {
+  background-color: #00ff00;
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
@@ -96,7 +102,7 @@
   padding: 10px;
   margin-left: 10px;
   background-color: #f44336;
-  color: #fff;
+  color: #1923e6;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -140,7 +146,7 @@
 /* Add background image */
 body {
   background-image: url('./octo.png');
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -148,9 +154,8 @@ body {
 
 .terminal {
   height: 100vh;
-  margin: 10px;
+  margin: 25px;
   padding: 10px;
-  box-shadow: 0 0 1px rgba(9, 192, 116, 0.5);
   position: relative;
   
 }
@@ -166,10 +171,6 @@ body {
   border-top-right-radius: 4px;
 }
 
-.title-bar-text {
-  color: #fff;
-  font-weight: bold;
-}
 
 .title-bar-controls {
   display: flex;
@@ -289,4 +290,7 @@ body {
 
 .copy-button span {
   margin-left: 5px;
+}
+.button-line button {
+  font-family: Arial;
 }
