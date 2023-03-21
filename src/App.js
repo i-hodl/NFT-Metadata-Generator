@@ -65,7 +65,10 @@ function App() {
     event.preventDefault();
 
     const reader = new window.FileReader();
-    reader.readAsArrayBuffer(file);
+    if (file) {
+      reader.readAsArrayBuffer(file);
+    }
+    
 
     reader.onloadend = async () => {
       const buffer = new Uint8Array(reader.result);
