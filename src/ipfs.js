@@ -1,5 +1,6 @@
 import { create } from "ipfs-http-client";
-const ipfs = create({ host: "ipfs.infura.io", port: 5001, protocol: "https" });
+//change host and port below for local setup
+const ipfs = create({ host: "ipfs.local", port: 5001, protocol: "http" });
 
 const form = document.getElementById("upload-form");
 const result = document.getElementById("result");
