@@ -2,8 +2,8 @@ import React, { useState, useCallback, useRef } from "react";
 import "./App.css";
 import { create } from "ipfs-http-client";
 const Buffer = require("buffer/").Buffer;
-
-const ipfs = create({ host: "ipfs.local", port: 5001, protocol: "http" });
+// change <ipfs.dappnode> to your node and port
+const ipfs = create({ host: "ipfs.dappnode", port: 5001, protocol: "http" });
 
 function App() {
   const [title, setTitle] = useState("");
@@ -54,6 +54,12 @@ function App() {
   const handleAddTraitClick = useCallback(() => {
     const newTraits = traits.slice();
     newTraits.push({ key: "", value: "" });
+    setTraits(newTraits);
+  }, [traits]);
+
+  const handleRemoveTraitClick = useCallback(() => {
+    const newTraits = traits.slice();
+    newTraits.pop();
     setTraits(newTraits);
   }, [traits]);
 
@@ -160,6 +166,9 @@ function App() {
                         handleTraitValueChange(event, index)
                       }
                     />
+                    <button type="button" onClick={handleRemoveTraitClick}>
+                      - Remove Trait
+                    </button>
                   </div>
                 ))}
                 <button type="button" onClick={handleAddTraitClick}>
