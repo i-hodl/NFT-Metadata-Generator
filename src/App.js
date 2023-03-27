@@ -2,8 +2,8 @@ import React, { useState, useCallback, useRef } from "react";
 import "./App.css";
 import { create } from "ipfs-http-client";
 const Buffer = require("buffer/").Buffer;
-// change <ipfs.dappnode> to your node and port
-const ipfs = create({ host: "ipfs.dappnode", port: 5001, protocol: "http" });
+// change <dappnode.local> to your node and port
+const ipfs = create({ host: "dappnode.local", port: 5001, protocol: "http" });
 
 function App() {
   const [title, setTitle] = useState("");
