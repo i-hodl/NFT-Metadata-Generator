@@ -3,7 +3,7 @@ import "./App.css";
 import { create } from "ipfs-http-client";
 const Buffer = require("buffer/").Buffer;
 // change <dappnode.local> to your node and port
-const ipfs = create({ host: "dappnode.local", port: 5001, protocol: "http" });
+const ipfs = create({ host: "iNuc", port: 5001, protocol: "http" });
 
 function App() {
   const [title, setTitle] = useState("");
